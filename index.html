@@ -13,6 +13,69 @@
         
             https://www.khanacademy.org/computer-programming/final_project/5726385327783936
             https://www.khanacademy.org/computer-programming/rock-paper-scissors/5795498515447808
+        
+        
+        
+        Amber's Bitmoji Code:
+        
+        var drawBitmojiBody = function (bitmojiX, bitmojiY,bitmojiH) {
+    fill(26, 18, 18); //sweater color
+    quad(bitmojiX + bitmojiH/100*167,bitmojiY + bitmojiH/100*230,        bitmojiX + bitmojiH/100*47,bitmojiY + bitmojiH/100*232,bitmojiX +     bitmojiH/100*13,bitmojiY + bitmojiH/100*141,bitmojiX + bitmojiH      /100*191,bitmojiY + bitmojiH/100*141); //torso
+
+    fill(38, 31, 31); //hood color
+    bezier(bitmojiX + bitmojiH/100*205,bitmojiY + bitmojiH/100           *140,bitmojiX + bitmojiH/100*165,bitmojiY - bitmojiH/100*31          ,bitmojiX + bitmojiH/100*23,bitmojiY - bitmojiH/100*75,bitmojiX +     bitmojiH/100*6,bitmojiY + bitmojiH/100*161); //hood
+    
+};
+
+var drawBitmojiHead = function (bitmojiX,bitmojiY,bitmojiH) {
+    fill(214, 186, 116); //skin color
+    ellipse(bitmojiX + bitmojiH/100*100, bitmojiY + bitmojiH/100*100    ,bitmojiH/100*125,bitmojiH/100*125); //face
+    
+    fill(117, 67, 23); //eye color
+    ellipse(bitmojiX + bitmojiH/100*128, bitmojiY + bitmojiH/100*90,     bitmojiH/100*10,bitmojiH/100*5); //right eye
+
+    fill(117, 67, 23); //eye color
+    ellipse(bitmojiX + bitmojiH/100*77, bitmojiY + bitmojiH/100*90,      bitmojiH/100*10,bitmojiH/100*5); //left eye
+    
+    noFill();
+    stroke(143, 117, 104);
+    strokeWeight(3);
+    ellipse(bitmojiX + bitmojiH/100*128, bitmojiY +bitmojiH/100*89,      bitmojiH/100*33, bitmojiH/100*29);//right eyeglass
+   
+    ellipse(bitmojiX + bitmojiH/100*78, bitmojiY + bitmojiH/100*89,      bitmojiH/100*33, bitmojiH/100*29);//left eyeglass
+   
+    line(bitmojiX + bitmojiH/100*95, bitmojiY + bitmojiH/100*88,         bitmojiX + bitmojiH/100*112, bitmojiY + bitmojiH/100*88);//middle     bar glasses
+   
+    line(bitmojiX + bitmojiH/100*158, bitmojiY + bitmojiH/100*83,        bitmojiX + bitmojiH/100*147, bitmojiY + bitmojiH/100*88);//right     bar glasses
+   
+    line(bitmojiX + bitmojiH/100*61, bitmojiY + bitmojiH/100*88,         bitmojiX + bitmojiH/100*41, bitmojiY + bitmojiH/100*86);//left       bar glasses
+
+    line(bitmojiX + bitmojiH/100*91, bitmojiY + bitmojiH/100*70,         bitmojiX + bitmojiH/100*56, bitmojiY + bitmojiH/100*67);//left       eyebrow
+
+    line(bitmojiX + bitmojiH/100*119, bitmojiY + bitmojiH/100*71,        bitmojiX + bitmojiH/100*147, bitmojiY + bitmojiH/100*69);//right     eyebrow
+    
+    fill(209, 180, 113);
+    stroke(110, 94, 58);
+    strokeWeight(1);
+    triangle(bitmojiX + bitmojiH/100*104, bitmojiY + bitmojiH/100*97,     bitmojiX + bitmojiH/100*109, bitmojiY + bitmojiH/100*120,            bitmojiX + bitmojiH/100*95, bitmojiY + bitmojiH/100*120); //nose
+
+    fill(224, 221, 221);
+    arc(bitmojiX + bitmojiH/100*100, bitmojiY + bitmojiH/100*132,        bitmojiH/100*21, bitmojiH/100*29, bitmojiH/100*5, bitmojiH           -bitmojiH + 200);//mouth
+    
+    textSize(bitmojiH/100*33);
+    text("ALR", bitmojiX + bitmojiH/100*71, bitmojiY + bitmojiH/100      *206);
+    
+    fill(79, 77, 77);//hood shadow color
+    arc(bitmojiX + bitmojiH/100*100, bitmojiY + bitmojiH/100*55,         bitmojiH/100*111, bitmojiH/100*-38, bitmojiH/100*-21, bitmojiH       -bitmojiH + 200); //hood shadow
+    
+
+};
+
+var drawBitmoji = function (bitmojiX, bitmojiY, bitmojiH) {
+    drawBitmojiBody (bitmojiX,bitmojiY,bitmojiH);
+    drawBitmojiHead (bitmojiX,bitmojiY,bitmojiH);
+    
+};
 
     </body>
 </html>
